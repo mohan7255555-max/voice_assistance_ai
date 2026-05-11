@@ -11,7 +11,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 engine = pyttsx3.init()
 
 def speak(text):
-    """Speak text using a background thread"""
+    
     def run():
         engine.say(text)
         engine.runAndWait()
@@ -19,7 +19,7 @@ def speak(text):
 
 
 def listen():
-    """Listen from microphone and convert to text"""
+    
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("🎙 Listening...")
